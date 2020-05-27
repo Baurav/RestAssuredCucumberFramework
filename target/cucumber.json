@@ -1,0 +1,164 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-02T12:20:23.779Z",
+        "line": 13,
+        "name": "Varify if place is being added sucessfully with add place API",
+        "description": "",
+        "id": "validating-place-api;varify-if-place-is-being-added-sucessfully-with-add-place-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1335000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Add Place Payload with \"Baurav Home\" \"English\" \"Symphony Megapolis\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Baurav Home\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Symphony Megapolis\"",
+                  "offset": 47
+                }
+              ],
+              "location": "stepDefinations.StepDefination.addPlacePayloadWith(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1311000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User call \"addPlaceAPI\" with \"POST\" Http Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"addPlaceAPI\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinations.StepDefination.userCallWithPostHttpRequest(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The API call success with status cosde as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinations.StepDefination.theAPICallSuccessWithStatusCosdeAs(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1049000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinations.StepDefination.inResponseBodyIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinations.StepDefination.inResponseBodyIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 355000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify place_id created maps to \"Baurav Home\" using \"getPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Baurav Home\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"getPlaceAPI\"",
+                  "offset": 52
+                }
+              ],
+              "location": "stepDefinations.StepDefination.verifyPlace_idCreatedMapsToUsing(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API",
+    "description": "",
+    "id": "validating-place-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidation.feature",
+    "tags": []
+  }
+]
